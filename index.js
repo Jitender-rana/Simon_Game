@@ -4,6 +4,7 @@
 
 
  function startover(){
+  
   level=0;
   gamepattern=[];
   started=false;
@@ -24,7 +25,7 @@
     var audio1=new Audio("./sounds/wrong.mp3");
     audio1.play();
     $("body").addClass("game-over");
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over , Double click anywhere to Restart");
     setTimeout(function(){
       $("body").removeClass("game-over");
     },300);
@@ -59,7 +60,7 @@
 
  var started=false;
  var level=0;
- $(document).keypress(function(){
+ $("body").dblclick(function(){
   if(!started){
     $("#level-title").text("Level "+level);
     nextsequence();
